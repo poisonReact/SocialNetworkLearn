@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/SocialNetworkLearn/static/css/main.70381089.chunk.css",
+    "main.js": "/SocialNetworkLearn/static/js/main.64a6acdc.chunk.js",
+    "main.js.map": "/SocialNetworkLearn/static/js/main.64a6acdc.chunk.js.map",
+    "runtime~main.js": "/SocialNetworkLearn/static/js/runtime~main.357df35e.js",
+    "runtime~main.js.map": "/SocialNetworkLearn/static/js/runtime~main.357df35e.js.map",
+    "static/js/2.5b73b604.chunk.js": "/SocialNetworkLearn/static/js/2.5b73b604.chunk.js",
+    "static/js/2.5b73b604.chunk.js.map": "/SocialNetworkLearn/static/js/2.5b73b604.chunk.js.map",
+    "static/css/3.89fdcfbe.chunk.css": "/SocialNetworkLearn/static/css/3.89fdcfbe.chunk.css",
+    "static/js/3.ef798483.chunk.js": "/SocialNetworkLearn/static/js/3.ef798483.chunk.js",
+    "static/js/3.ef798483.chunk.js.map": "/SocialNetworkLearn/static/js/3.ef798483.chunk.js.map",
+    "index.html": "/SocialNetworkLearn/index.html",
+    "precache-manifest.5fc2e28dddadc269da1be29b5e6c3a82.js": "/SocialNetworkLearn/precache-manifest.5fc2e28dddadc269da1be29b5e6c3a82.js",
+    "service-worker.js": "/SocialNetworkLearn/service-worker.js",
+    "static/css/3.89fdcfbe.chunk.css.map": "/SocialNetworkLearn/static/css/3.89fdcfbe.chunk.css.map",
+    "static/css/main.70381089.chunk.css.map": "/SocialNetworkLearn/static/css/main.70381089.chunk.css.map",
+    "static/media/preloader.gif": "/SocialNetworkLearn/static/media/preloader.a6a6686c.gif"
+  }
+}

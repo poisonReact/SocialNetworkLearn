@@ -1,15 +1,140 @@
 .header {
-    grid-area: header;
-    background-color: green;
-}
+    height: 60px;
+    background-color: rgb(1, 61, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logoWrapper{
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+
+      .logo {
+        width: 40px;
+       
+      }
+
+      .logoHeader {
+        padding-left: 10px;
+      }
+    }
+
+    .loginWrapper {
+      display: flex;
+      align-items: center;
+      padding-right: 10px;
+      
+      .avatarLogined {
+        animation-duration: 0.5s ;
+        animation-timing-function: ease-in;
+        animation-name: avatarLoginAnimated;
+        display: block;
+        border-radius: 50%;
+        height: 40px;
+        padding: 10px;
+        
+      }
+      
+      @keyframes avatarLoginAnimated {
+        from {
+          height: 0px;
+        }
+      
+        to {
+          height: 40px;
+        }
+      
+        80% {
+          height: 50px;
+        }
+      }
+
+
+      .avatarLogouted {
+        animation-duration: 0.5s ;
+        animation-timing-function: ease-in;
+        animation-name: avatarLogoutAnimated;
+        display: block;
+        border-radius: 50%;
+        height: 0px;
+        padding: 10px;
+        
+      }
+
+      @keyframes avatarLogoutAnimated {
+        from {
+          height: 40px;
+        }
+      
+        to {
+          height: 0px;
+        }
+      
+        20% {
+          height: 50px;
+        }
+      }
+
+      .userLogined {
+        animation-duration: 0.5s ;
+        animation-timing-function: ease-in;
+        animation-name: userLoginAnimated;
+        display: block;
+        padding-right: 10px;
+        font-size: 20px;
+        
+      }
+
+      @keyframes userLoginAnimated {
+        from {
+          font-size: 0px;
+        }
+      
+        to {
+          font-size: 20px;
+        }
+      
+        80% {
+          font-size: 24px;
+        }
+      }
+
+
+      .userLogouted {
+        animation-duration: 0.5s ;
+        animation-timing-function: ease-in;
+        animation-name: userLogoutAnimated;
+        display: block;
+        padding-right: 10px;
+        font-size: 0px;
+        
+      }
+
+      @keyframes userLogoutAnimated {
+        from {
+          font-size: 20px;
+        }
+      
+        to {
+          font-size: 0px;
+        }
+      
+        20% {
+          font-size: 24px;
+        }
+      }
+
+      .logout {
+        margin-right: 10px
+      }
+
   
-.logo {
-  width: 30px;
+    }   
 }
 
-.loginBlock {
-  float: right;
-}
-.loginBlock a {
-  color: white;
-}
+
+
+
+
+

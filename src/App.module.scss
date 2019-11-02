@@ -1,0 +1,30 @@
+@import 'normalize.css';
+
+html,body {
+  height: 100%;
+}
+
+.appWrapper {
+  min-height: 100vh ;
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(83, 141, 248);
+
+  .mainArea {
+    display: flex;
+    flex-grow: 10
+    
+  }
+  
+  .content {
+      background-color: rgb(74, 146, 15);
+      width: 1000px;
+    }
+}
+
+
+
+
+

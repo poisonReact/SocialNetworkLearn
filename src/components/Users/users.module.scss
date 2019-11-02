@@ -1,8 +1,48 @@
-.userPhoto {
-    width: 100px;
-    height: 100px;
+.paginatorWrapper {
+        display: flex;
+        justify-content: center;
+        width: 950px;
+        margin: 10px auto 0px auto;
+
+}
+
+.usersWrapper {
+    
+    display: flex;
+    flex-wrap: wrap;
+   
+    
+   
+    .userWrapper {
+        border: 2px black solid;
+        border-radius: 5px;
+        width: 220px;
+        height: 290px;
+        margin: 10px;  
+    }
+
+
+    .userPhoto {
+        display: block;
+        margin: 10px auto 0px auto;
+
+        max-width: 200px;
+        max-height: 200px;  
+       
+    }
+
+    .userName {
+        margin-left: 10px;
+    }
+
+    .userStatus {
+        margin-left: 10px;
+        margin-right: 10px;
+        word-wrap: break-word
+    }
 }
 
 .selectedPage {
+    
     font-weight: bold
 }

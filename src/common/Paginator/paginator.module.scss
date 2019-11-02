@@ -1,8 +1,26 @@
-.userPhoto {
-    width: 100px;
-    height: 100px;
-}
+.paginatorWrapper{
+    display: flex;
 
-.selectedPage {
-    font-weight: bold
+    .pagesWrapper {
+    display: flex;
+
+        .selectedPage {
+            font-weight: bold
+        }
+        
+        
+        .pageNumber {
+            margin: 0px 5px 0px 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px gray solid;
+            cursor: pointer;
+            background-color: aqua;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+    }
+
 }

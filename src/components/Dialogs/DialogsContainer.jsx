@@ -1,4 +1,5 @@
 import React from 'react';
+import {reset} from 'redux-form';
 import { addMessageActionCreator} from '../../redux/dialogsReducer'
 import Dialogs from './Dialogs'
 import { connect } from 'react-redux';
@@ -19,6 +20,7 @@ let mapDispatchToProps = (dispatch) => {
     return {
         addMessage: (newMessage) => {
             dispatch(addMessageActionCreator(newMessage))
+            dispatch(reset('dialogs'))
         }
     }
 }

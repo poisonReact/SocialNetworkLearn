@@ -1,0 +1,36 @@
+.ButtonWrapper {
+  cursor: pointer;
+  color: cyan;
+
+  a {
+    text-decoration: none;
+    color: cyan;
+  }
+      .customButton {
+       
+        display: flex;
+        align-items: center;
+        background-color: red;
+        border-radius: 5px;
+        
+      }
+
+      .customButton:active {
+       
+        color: black
+        
+      }
+
+      .customButton:hover {
+       
+        background-color: rgba(255, 0, 0, 0.575);
+        
+      }
+
+      .activeLink {
+        
+        color: yellow;
+        
+      }
+    }
+

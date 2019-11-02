@@ -7,11 +7,11 @@ import { NavLink } from "react-router-dom";
 
 let User = ({ user, followingInProgress, unfollow, follow }) => {
     return (
-        <div>
+        <div className={styles.userWrapper}>
             <span>
                 <div>
                     <NavLink to={"/profile/" + user.id}>
-                        <img src={user.photos.small != null ? user.photos.small : userPhotoPng} className={styles.userPhoto} />
+                        <img src={user.photos.large != null ? user.photos.large : userPhotoPng} className={styles.userPhoto} />
                     </NavLink>
                 </div>
                 <div>
@@ -32,12 +32,8 @@ let User = ({ user, followingInProgress, unfollow, follow }) => {
             </span>
             <span>
                 <span>
-                    <div>{user.name}</div>
-                    <div>{user.status}</div>
-                </span>
-                <span>
-                    <div>{'user.location.country'}</div>
-                    <div>{'user.location.city'}</div>
+                    <div className={styles.userName}><b>Name: </b>{user.name}</div>
+                    <div className={styles.userStatus}><b>Status: </b>{user.status}</div>
                 </span>
             </span>
 

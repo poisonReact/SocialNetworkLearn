@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styles from './Dialogs.module.scss';
 import DialogItem from './DialogItem/DialogsItem';
 import Message from './Message/Message'
@@ -34,6 +35,7 @@ const Dialogs = ({ messagePage, addMessage }) => {
     const onSubmit = (values) => {
         console.log(values.newMessage)
         addMessage(values.newMessage);
+        
     }
 
     let dialogsMaped = messagePage.dialogData.map(dialog => <DialogItem name={dialog.name} key={dialog.id} id={dialog.id} />);

@@ -1,26 +1,38 @@
 import React from 'react';
 import styles from './Nav.module.scss';
-import {NavLink} from "react-router-dom";
+import NavButton from '../../common/customButton/NavButton';
+
 
 const Nav = () => {
+    const buttonWidth = `180px`;
+    const buttonHeight = `30px`;
+    const isContainActiveClassNamet = true;
+    
     return (
-        <nav className={styles.nav}>
-            <div className={styles.item} >
-                <NavLink to="/Profile" activeClassName={styles.activeLink}>Profile</NavLink>
-            </div>
-            <div className={styles.item}>
-                <NavLink to="/Dialogs" activeClassName={styles.activeLink}>DIalogs</NavLink>
-            </div>
-            <div className={styles.item}>
-                <NavLink to="/Users" activeClassName={styles.activeLink}>Users</NavLink>
-            </div>
-            <div className={styles.item}>
-                <NavLink to="/Dialogs">Some content</NavLink>
-            </div>
-            <div className={styles.item}>
-                <NavLink to="/Dialogs">Some content</NavLink>
-            </div>
-        </nav>
+
+
+
+        <div className={styles.nav}>
+            <NavButton route={"/Profile"}
+                content={"Profile"}
+                buttonHeight={buttonHeight}
+                buttonWidth={buttonWidth}
+                isContainActiveClassName={isContainActiveClassNamet}
+            />
+            <NavButton route={"/Dialogs"}
+                content={"Dialogs"}
+                buttonHeight={buttonHeight}
+                buttonWidth={buttonWidth}
+                isContainActiveClassName={isContainActiveClassNamet}
+            />
+            <NavButton route={"/Users"}
+                content={"Users"}
+                buttonHeight={buttonHeight}
+                buttonWidth={buttonWidth}
+                isContainActiveClassName={isContainActiveClassNamet}
+            />
+            
+        </div>
 
     )
 }

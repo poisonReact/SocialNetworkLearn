@@ -4,7 +4,6 @@ import Preloader from '../../../common/Preloader/Preloader';
 
 const ProfileStatusWithHooks = (props) => {
 
-    let [editMode, setEditMode] = useState(false)
     let [status, setStatus] = useState(props.status)
 
     useEffect( () => {
@@ -12,12 +11,14 @@ const ProfileStatusWithHooks = (props) => {
     }, [props.status] )
 
     const activateEditMode = () => {
-        setEditMode(true)
+        if (props.isOwner) {
+        props.setEditModeForStatus(true)
+        }
     } 
 
     const deactivateEditMode = () => {
-        setEditMode(false)
         props.updateUserStatus(status)
+        
     }
 
     const onStatusChange =(e) => {
@@ -25,20 +26,21 @@ const ProfileStatusWithHooks = (props) => {
     }
 
     return (
-        <>
-            <div>
-                {!editMode &&
+            <span>
+                {!props.editModeForStatus &&
                     <div>
-                        <span onDoubleClick={activateEditMode}>{props.status || '-------'}</span>
+                        <span className={styles.statusString} onDoubleClick={activateEditMode}>{props.status || '-------'}</span>
+                        <div>{props.errors}</div>
                     </div>
+                    
                 }
-                {editMode &&
+                {props.editModeForStatus &&
                     <div>
-                        <input onChange={onStatusChange} autoFocus={true} onBlur={deactivateEditMode} value={status} />
-                    </div>
+                        <textarea cols={123} rows={3} onChange={onStatusChange} autoFocus={true} onBlur={deactivateEditMode} value={status} />
+                        <div>{props.errors}</div>
+                        </div>
                 }
-            </div>
-        </>
+            </span>   
     )
 }
 

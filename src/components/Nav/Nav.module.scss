@@ -1,19 +1,12 @@
 .nav {
-    grid-area: nav;
+    
+    width: 180px;
+    max-width: 180px;
     background-color: blue;
-    padding: 20px;
+    padding: 10px;
+
   
 }
 
-.item a {
-  color: white;
-  
-  text-decoration: none;
-  
-}
 
-.item a.activeLink {
-    color: gold;
-  
-}
 

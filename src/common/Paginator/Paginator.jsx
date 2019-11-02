@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './paginator.module.scss'
+import cn from 'classnames'
 
 
 
-let Paginator = ({ totalItemsCount, pageSize, currentPage, onPageChanged, portionSize = 5 }) => {
+let Paginator = ({ totalItemsCount, pageSize, currentPage, onPageChanged, onPortionChanged, portionSize, currentPortion}) => {
 
 
 
@@ -15,30 +16,29 @@ let Paginator = ({ totalItemsCount, pageSize, currentPage, onPageChanged, portio
     }
 
     let totalPortionQuantity = Math.ceil(pagesCount / portionSize)
-    let [portionNumber, setPortionNumber] = useState(1)
-    let firstItemInPortion = (portionNumber - 1) * portionSize + 1;
-    let lastItemInPortion = portionNumber * portionSize
+    let firstItemInPortion = (currentPortion - 1) * portionSize + 1;
+    let lastItemInPortion = currentPortion * portionSize
 
     return (
 
-        <div>
-            {portionNumber > 1 &&
+        <div className={styles.paginatorWrapper}>
+            {currentPortion > 1 &&
                 <button onClick={() => {
-                    setPortionNumber(portionNumber - 1);
+                    onPortionChanged(currentPortion - 1);
                     onPageChanged(lastItemInPortion - portionSize)
                     }}> Prev </button>}
-            <span>
+            <span className={styles.pagesWrapper}>
                 {pages
                     .filter(p => p >= firstItemInPortion && p <= lastItemInPortion)
                     .map((p) => {
                         return <span
-                            className={currentPage === p && styles.selectedPage}
+                            className={ cn({[styles.selectedPage]: currentPage === p}, styles.pageNumber)}
                             onClick={() => { onPageChanged(p) }}>{p}</span>
                     })}
             </span>
-            {portionNumber < totalPortionQuantity &&
+            {currentPortion < totalPortionQuantity &&
                 <button onClick={() => {
-                    setPortionNumber(portionNumber + 1);
+                    onPortionChanged(currentPortion + 1);
                     onPageChanged(firstItemInPortion + portionSize )
                     }}> Next </button>}
         </div>

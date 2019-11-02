@@ -1,0 +1,31 @@
+@import 'normalize.css';
+
+html,body {
+  height: 100%;
+}
+
+.appWrapper {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: [line1] 200px [line2] auto [line3];
+  grid-template-rows: [row1] 60px [row2] 1fr [row3] 30px [row4];
+  grid-template-areas: 
+  "header header"
+  "nav content"
+  "footer footer";
+  grid-gap: 10px;
+  background-color: rgb(83, 141, 248);
+
+}
+
+.content {
+  min-height: 88vh ;
+    grid-area: content;
+    
+    background-color: rgb(74, 146, 15);
+  
+  }
+
+
+

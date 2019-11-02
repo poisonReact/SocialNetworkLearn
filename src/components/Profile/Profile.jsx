@@ -11,10 +11,16 @@ const Profile = (props) => {
     
     return (
         <div>
-            <ProfileInfo profile={props.profile} 
+            <ProfileInfo 
+            errors={props.errors}
+            profile={props.profile} 
             status={props.status}
-            
-            updateUserStatus={props.updateUserStatus}/>
+            isOwner={props.isOwner}
+            savePhoto={props.savePhoto}
+            saveProfile={props.saveProfile}
+            updateUserStatus={props.updateUserStatus}
+            setEditModeForStatus={props.setEditModeForStatus}
+            editModeForStatus={props.editModeForStatus}/>
             <MyPostsContainer />
         </div>
     )
